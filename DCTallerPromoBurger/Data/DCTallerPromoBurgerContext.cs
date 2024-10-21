@@ -13,4 +13,6 @@ public class DCTallerPromoBurgerContext : DbContext
         }
 
         public DbSet<Burger> Burger { get; set; } = default!;
+
+public DbSet<DCTallerPromoBurger.Models.Promo> Promo { get; set; } = default!;
     }
