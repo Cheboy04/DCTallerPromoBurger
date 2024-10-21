@@ -1,4 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DCTallerPromoBurgerContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DCTallerPromoBurgerContext") ?? throw new InvalidOperationException("Connection string 'DCTallerPromoBurgerContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
