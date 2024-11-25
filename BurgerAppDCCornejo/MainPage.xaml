@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurgerAppDCCornejo.MainPage">
+
+    <StackLayout>
+        <Label Text="Ejemplo de App y Api"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               FontSize="Header"/>
+        <Button Text="Llamar API"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"/>
+
+        <ListView x:Name="ListaView" 
+                  HorizontalOptions="Center"
+                  VerticalOptions="CenterAndExpand">
+            <ListView.ItemTemplate>
+               <DataTemplate>
+                    <TextCell Text="{Binding name}"/>
+                </DataTemplate>
+                
+
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
